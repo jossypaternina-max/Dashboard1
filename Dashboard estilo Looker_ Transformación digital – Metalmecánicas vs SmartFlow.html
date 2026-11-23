@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dashboard: Transformación digital – Metalmecánicas del Caribe vs SmartFlow</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+<style>
+:root{
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#F1F3F4;--card:#FFFFFF;--ink:#202124;--muted:#5F6368;--line:#E0E3E7;--head:#64B5F6;--headink:#0B1F33;
+  --a:#4285F4;--b:#F29E4C;--track:#E8EAED;--th:#E8F0FE;color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#121619;--card:#1B2126;--ink:#E8EAED;--muted:#A0A7AE;--line:#2E363C;--head:#1E4E7A;--headink:#EAF3FB;--a:#6FA3FF;--b:#F5B070;--track:#2A3238;--th:#232C36;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#121619;--card:#1B2126;--ink:#E8EAED;--muted:#A0A7AE;--line:#2E363C;--head:#1E4E7A;--headink:#EAF3FB;--a:#6FA3FF;--b:#F5B070;--track:#2A3238;--th:#232C36;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 Roboto,system-ui,sans-serif}
+.page{max-width:1100px;margin:0 auto;padding:12px}
+.head{background:var(--head);color:var(--headink);padding:16px 18px;border-radius:6px;font-size:clamp(17px,3.2vw,26px);font-weight:700;letter-spacing:.2px}
+.head small{display:block;font-size:13px;font-weight:400;margin-top:2px}
+.grid{display:grid;gap:12px;margin-top:12px}
+.k4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.c2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.c3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:14px;min-width:0}
+.card h3{margin:0 0 10px;font-size:14px;font-weight:700}
+.kl{font-size:13px;font-weight:700}
+.kv{margin-top:6px;border:1px solid var(--line);border-radius:4px;padding:6px 10px;font-size:22px}
+.kv small{font-size:12px;color:var(--muted);display:block}
+.kv.s{display:flex;gap:14px}
+.kv .a,.ca{color:var(--a)}.kv .b,.cb{color:var(--b)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+.da{background:var(--a)}.db{background:var(--b)}
+.legend{font-size:12px;color:var(--muted);margin-bottom:8px}.legend span{margin-right:12px}
+.donut-wrap{display:flex;align-items:center;gap:14px;justify-content:center}
+.donut{width:130px;height:130px;border-radius:50%;position:relative;flex:none}
+.donut::after{content:"";position:absolute;inset:26px;background:var(--card);border-radius:50%}
+.donut b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:1;font-size:20px}
+.br{display:grid;grid-template-columns:96px 1fr;align-items:center;gap:8px;margin:7px 0;font-size:12px;color:var(--muted)}
+.tr{background:var(--track);height:20px;border-radius:3px;overflow:hidden}
+.fl{height:100%;display:flex;align-items:center;justify-content:flex-end;padding-right:6px;font-size:12px;font-weight:700;color:#101820;border-radius:3px;width:0;transition:width .8s ease}
+.fa{background:var(--a)}.fb{background:var(--b)}
+.cols{display:flex;align-items:flex-end;justify-content:space-around;height:150px;border-bottom:1px solid var(--line);padding:0 20px}
+.col{width:70px;text-align:center;font-size:12px;font-weight:700}
+.col i{display:block;margin:4px auto 0;width:100%;border-radius:3px 3px 0 0}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px;min-width:480px}
+th{background:var(--th);text-align:left;padding:8px 10px;font-weight:700;border-bottom:1px solid var(--line)}
+td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:nth-child(even) td{background:color-mix(in srgb,var(--th) 35%,transparent)}
+ul{margin:0;padding-left:18px}li{margin:3px 0}
+.pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:11px;font-weight:700;color:#101820}
+.note{font-size:12px;color:var(--muted);margin-top:8px}
+.hl{border-left:4px solid var(--a);padding-left:10px;font-size:13px}
+footer{text-align:center;color:var(--muted);font-size:12px;margin:18px 0 6px}
+@media (prefers-reduced-motion:reduce){.fl{transition:none}}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="head">TRANSFORMACIÓN DIGITAL: METALMECÁNICAS DEL CARIBE VS SMARTFLOW<small>Estudio de caso · Electiva de Profundización I · Ingeniería Industrial</small></div>
+
+  <div class="grid k4">
+    <div class="card"><div class="kl">Empleados (Metalmecánicas)</div><div class="kv">85<small>Empresa mediana, +20 años</small></div></div>
+    <div class="card"><div class="kl">Productividad promedio</div><div class="kv s"><div class="a">68%<small>Metalmecánicas</small></div><div class="b">92%<small>SmartFlow</small></div></div></div>
+    <div class="card"><div class="kl">Tiempo de respuesta</div><div class="kv s"><div class="a">48 h<small>Metalmecánicas</small></div><div class="b">5 min<small>SmartFlow</small></div></div></div>
+    <div class="card"><div class="kl">Automatización</div><div class="kv s"><div class="a">25%<small>Metalmecánicas</small></div><div class="b">85%<small>SmartFlow</small></div></div></div>
+  </div>
+
+  <div class="grid c3">
+    <div class="card"><h3>Automatización: Metalmecánicas</h3>
+      <div class="donut-wrap"><div class="donut" style="background:conic-gradient(var(--a) 0 25%,var(--b) 25% 100%)"><b>25%</b></div>
+      <div class="legend"><div><span class="dot da"></span>Automatizado 25%</div><div><span class="dot db"></span>Manual 75%</div></div></div></div>
+    <div class="card"><h3>Automatización: SmartFlow</h3>
+      <div class="donut-wrap"><div class="donut" style="background:conic-gradient(var(--a) 0 85%,var(--b) 85% 100%)"><b>85%</b></div>
+      <div class="legend"><div><span class="dot da"></span>Automatizado 85%</div><div><span class="dot db"></span>Manual 15%</div></div></div></div>
+    <div class="card"><h3>Tiempo de respuesta al cliente (horas)</h3>
+      <div class="cols"><div class="col">48 h<i class="fa" style="height:110px"></i><div style="font-weight:400;color:var(--muted)">Metalmec.</div></div><div class="col">5 min<i class="fb" style="height:3px"></i><div style="font-weight:400;color:var(--muted)">SmartFlow</div></div></div>
+      <div class="note">48 h = 2.880 min: SmartFlow responde 576 veces más rápido.</div></div>
+  </div>
+
+  <div class="grid c2">
+    <div class="card"><h3>Indicadores principales (%)</h3>
+      <div class="legend"><span><span class="dot da"></span>Metalmecánicas</span><span><span class="dot db"></span>SmartFlow</span></div>
+      <div class="br">Productividad<div><div class="tr"><div class="fl fa" data-w="68">68%</div></div><div class="tr" style="margin-top:3px"><div class="fl fb" data-w="92">92%</div></div></div></div>
+      <div class="br">Automatización<div><div class="tr"><div class="fl fa" data-w="25">25%</div></div><div class="tr" style="margin-top:3px"><div class="fl fb" data-w="85">85%</div></div></div></div>
+      <div class="note">Brecha: 24 puntos en productividad y 60 puntos en automatización.</div></div>
+    <div class="card"><h3>Comparación principal</h3><div class="scroll"><table>
+      <tr><th>Aspecto</th><th>Metalmecánicas</th><th>SmartFlow</th></tr>
+      <tr><td>Procesos</td><td>Manuales</td><td>Automatizados</td></tr>
+      <tr><td>Comunicación</td><td>Llamadas y WhatsApp</td><td>Plataformas digitales</td></tr>
+      <tr><td>Información</td><td>Excel y documentos físicos</td><td>Sistemas integrados</td></tr>
+      <tr><td>Indicadores</td><td>Reportes manuales</td><td>Power BI</td></tr>
+      <tr><td>Decisiones</td><td>Experiencia y percepción</td><td>Datos en tiempo real</td></tr>
+      <tr><td>Clientes</td><td>Atención telefónica</td><td>Seguimiento digital</td></tr>
+      <tr><td>Tecnología</td><td>25% de automatización</td><td>85% de automatización</td></tr></table></div></div>
+  </div>
+
+  <div class="grid c2">
+    <div class="card"><h3>Industrias Metalmecánicas del Caribe</h3>
+      <div class="kl ca">Ventajas</div><ul><li>Más de 20 años de experiencia en el mercado.</li><li>Personal que conoce los procesos de producción.</li><li>Puede iniciar su transformación de forma progresiva.</li><li>No requiere una inversión tecnológica completa de inmediato.</li></ul>
+      <div class="kl cb" style="margin-top:10px">Desventajas</div><ul><li>Los procesos manuales aumentan el riesgo de errores.</li><li>Retrasos en la entrega de pedidos.</li><li>Comunicación poco eficiente entre departamentos.</li><li>Sin información actualizada para decidir.</li><li>Dificultad para responder a los clientes.</li></ul></div>
+    <div class="card"><h3>SmartFlow Logistics</h3>
+      <div class="kl ca">Ventajas</div><ul><li>Procesos automatizados e integrados.</li><li>Información en tiempo real.</li><li>Menores tiempos de entrega por optimización de rutas.</li><li>Decisiones apoyadas en indicadores.</li><li>Mayor satisfacción y fidelización de clientes.</li></ul>
+      <div class="kl cb" style="margin-top:10px">Desventajas</div><ul><li>Requiere inversión en tecnología y mantenimiento.</li><li>Depende de sistemas informáticos y conectividad.</li><li>Necesita personal capacitado en herramientas digitales.</li><li>Debe proteger constantemente los datos de sus clientes.</li></ul></div>
+  </div>
+
+  <div class="grid">
+    <div class="card"><h3>Impacto de la digitalización en cinco aspectos</h3><div class="scroll"><table>
+      <tr><th>Aspecto</th><th>Metalmecánicas</th><th>SmartFlow</th></tr>
+      <tr><td>Productividad</td><td>68% promedio</td><td>92%: la automatización reduce tareas repetitivas y errores</td></tr>
+      <tr><td>Tiempo de respuesta</td><td>48 horas</td><td>5 minutos con plataformas digitales</td></tr>
+      <tr><td>Toma de decisiones</td><td>Experiencia y reportes manuales</td><td>Indicadores y análisis de datos actualizados</td></tr>
+      <tr><td>Competitividad</td><td>Riesgo de perder clientes frente a competidores más rápidos</td><td>Responde al mercado y optimiza operaciones</td></tr>
+      <tr><td>Experiencia del cliente</td><td>Debe llamar para conocer el estado del pedido; genera quejas</td><td>Consulta pedidos, recibe notificaciones y califica el servicio</td></tr></table></div>
+      <div class="note hl" style="margin-top:12px">La transformación digital no consiste solo en adquirir equipos: es cambiar la manera de trabajar y administrar la organización. La tecnología por sí sola no garantiza el éxito.</div></div>
+  </div>
+
+  <div class="grid">
+    <div class="card"><h3>Estrategias propuestas para Metalmecánicas (85 empleados, con resistencia al cambio)</h3><div class="scroll"><table>
+      <tr><th>Estrategia</th><th>Acciones</th><th>Beneficio esperado</th></tr>
+      <tr><td><b>1. Sistema integrado de gestión</b></td><td>Integrar producción, compras, inventario y logística; registrar órdenes digitalmente; consultar el estado de pedidos; reducir documentos físicos y hojas independientes.</td><td>Mejor organización interna, menos errores y menos retrasos por falta de comunicación.</td></tr>
+      <tr><td><b>2. Dashboards en Power BI</b></td><td>Medir productividad, cumplimiento de entregas, tiempo de respuesta, satisfacción y costos operativos.</td><td>Decisiones con información clara, actualizada y organizada.</td></tr>
+      <tr><td><b>3. Servicio al cliente digital</b></td><td>Portal para consultar órdenes y fechas estimadas, recibir notificaciones y enviar solicitudes y reclamos.</td><td>Menor tiempo de respuesta, mejor comunicación y mayor satisfacción.</td></tr>
+      <tr><td><b>Complemento: capacitación</b></td><td>Capacitar a los 85 empleados y realizar jornadas de sensibilización. Implementar por etapas, empezando por las áreas con más dificultades.</td><td>Menor resistencia al cambio y adopción real de las herramientas.</td></tr></table></div></div>
+  </div>
+
+  <footer>Natalia Bernal Villalba · Docente: Yessica Polo Herrera · Universidad del Sinú Elías Bechara Zainúm · Noviembre de 2026</footer>
+</div>
+<script>
+requestAnimationFrame(function(){setTimeout(function(){
+  document.querySelectorAll('.fl').forEach(function(b){b.style.width=b.getAttribute('data-w')+'%';});
+},80);});
+</script>
+</body>
+</html>
